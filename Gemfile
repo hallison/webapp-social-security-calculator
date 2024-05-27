@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+gem "bootsnap", require: false
 gem "rails"
 gem "pg"
 gem "kaminari"
