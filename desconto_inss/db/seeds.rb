@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+require "yaml"
+
+proponents_seed_file = "#{File.dirname __FILE__}/seeds/proponents.yml"
+proponents = YAML.load_file proponents_seed_file, permitted_classes: [Date, Symbol]
+
+Proponent.insert_all proponents, unique_by: :document_br_cpf
