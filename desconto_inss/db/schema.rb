@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_27_135856) do
     t.integer "salary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["document_br_cpf"], name: "proponents_cpf_unique", unique: true
   end
 
 end

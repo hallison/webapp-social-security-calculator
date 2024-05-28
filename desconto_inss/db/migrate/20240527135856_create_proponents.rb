@@ -2,7 +2,7 @@ class CreateProponents < ActiveRecord::Migration[7.1]
   def change
     create_table :proponents do |t|
       t.string :name
-      t.string :document_br_cpf, limit: 11
+      t.string :document_br_cpf, limit: 11,  index: { unique: true, name: 'proponents_cpf_unique' }
       t.date :birth_date
       t.string :address_public_place
       t.string :address_number
