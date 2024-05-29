@@ -1,2 +1,45 @@
-<h1>Proponents#index</h1>
-<p>Find me in app/views/proponents/index.html.erb</p>
+<h1>Proponentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Aniversário</th>
+      <th>Endereço</th>
+      <th>CEP</th>
+      <th>Número/Contato</th>
+      <th>Número/Refrência</th>
+      <th>Salário</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%- @proponents.each do |proponent|%>
+    <tr>
+      <td><%= proponent[:name] %></td>
+      <td><%= proponent[:document_br_cpf] %></td>
+      <td><%= proponent[:birth_date].strftime "%d/%m/%Y" %></td>
+      <td>
+        <%= proponent[:address_public_place] %>,
+        <%= proponent[:address_number] %>,
+        <%= proponent[:address_district] %>,
+        <%= proponent[:address_city] %> - <%= proponent[:address_state] %>,
+      </td>
+      <td><%= proponent[:address_postalcode] %></td>
+      <td><%= proponent[:phone_contact] %></td>
+      <td><%= proponent[:phone_reference] %></td>
+      <td><%= proponent[:salary] %></td>
+    </tr>
+    <% end -%>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="3">Página <%= @proponents.page(1).current_page %> de <%= @proponents.page(1).total_pages %></td>
+      <td colspan="5">
+        <%= paginate @proponents %>
+      </td>
+    </tr>
+  </tfoot>
+</table>

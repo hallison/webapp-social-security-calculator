@@ -1,5 +1,7 @@
 class ProponentsController < ApplicationController
   def index
+    requested_page = params[:page] || 1
+    @proponents = Proponent.order(:name).page requested_page
   end
 
   def new
