@@ -36,7 +36,7 @@
 
   <tfoot>
     <tr>
-      <td colspan="3">Página <%= @proponents.page(1).current_page %> de <%= @proponents.page(1).total_pages %></td>
+      <td colspan="3">Página <%= @proponents.current_page %> de <%= @proponents.total_pages %></td>
       <td colspan="5">
         <%= paginate @proponents %>
       </td>
