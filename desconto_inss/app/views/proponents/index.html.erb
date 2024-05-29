@@ -1,34 +1,25 @@
 <h1>Proponentes</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>CPF</th>
-      <th>Aniversário</th>
-      <th>Endereço</th>
-      <th>CEP</th>
-      <th>Número/Contato</th>
-      <th>Número/Refrência</th>
-      <th>Salário</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Aniversário</th>
+      <th scope="col">CEP</th>
+      <th scope="col">Cidade - UF</th>
+      <th scope="col">Salário</th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="table-group-divider">
     <%- @proponents.each do |proponent|%>
     <tr>
       <td><%= proponent[:name] %></td>
       <td><%= proponent[:document_br_cpf] %></td>
       <td><%= proponent[:birth_date].strftime "%d/%m/%Y" %></td>
-      <td>
-        <%= proponent[:address_public_place] %>,
-        <%= proponent[:address_number] %>,
-        <%= proponent[:address_district] %>,
-        <%= proponent[:address_city] %> - <%= proponent[:address_state] %>,
-      </td>
       <td><%= proponent[:address_postalcode] %></td>
-      <td><%= proponent[:phone_contact] %></td>
-      <td><%= proponent[:phone_reference] %></td>
+      <td><%= proponent[:address_city] %> - <%= proponent[:address_state] %></td>
       <td><%= proponent[:salary] %></td>
     </tr>
     <% end -%>
@@ -36,8 +27,7 @@
 
   <tfoot>
     <tr>
-      <td colspan="3">Página <%= @proponents.current_page %> de <%= @proponents.total_pages %></td>
-      <td colspan="5">
+      <td colspan="6">
         <%= paginate @proponents %>
       </td>
     </tr>
