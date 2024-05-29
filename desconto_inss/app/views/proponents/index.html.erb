@@ -8,7 +8,8 @@
       <th scope="col">Aniversário</th>
       <th scope="col">CEP</th>
       <th scope="col">Cidade - UF</th>
-      <th scope="col">Salário</th>
+      <th scope="col">Salário Bruto</th>
+      <th scope="col">Salário Líquido</th>
     </tr>
   </thead>
 
@@ -20,14 +21,15 @@
       <td><%= proponent[:birth_date].strftime "%d/%m/%Y" %></td>
       <td><%= proponent[:address_postalcode] %></td>
       <td><%= proponent[:address_city] %> - <%= proponent[:address_state] %></td>
-      <td><%= proponent[:salary] %></td>
+      <td class="text-end"><%= proponent[:salary_gross] %></td>
+      <td class="text-end"><%= proponent[:salary_net] %></td>
     </tr>
     <% end -%>
   </tbody>
 
   <tfoot>
     <tr>
-      <td colspan="6">
+      <td colspan="7">
         <%= paginate @proponents %>
       </td>
     </tr>

@@ -9,7 +9,7 @@
   :address_state: "RJ"
   :phone_reference: "2139988110"
   :phone_contact: "21989853301"
-  :salary: 63540
+  :salary_gross: 635400
 - :name: "Francisca Catarina Baptista"
   :document_br_cpf: "95816509705"
   :birth_date: 1982-02-25
@@ -21,7 +21,7 @@
   :address_state: "BA"
   :phone_reference: "7725819467"
   :phone_contact: "77997559237"
-  :salary: 51280
+  :salary_gross: 512800
 - :name: "Giovanna Liz Jennifer Silveira"
   :document_br_cpf: "15528919509"
   :birth_date: 1988-04-07
@@ -33,7 +33,7 @@
   :address_state: "MA"
   :phone_reference: "9837349932"
   :phone_contact: "98981105194"
-  :salary: 141690
+  :salary_gross: 141690
 - :name: "Leandro Mateus Filipe Nunes"
   :document_br_cpf: "80772927391"
   :birth_date: 1956-03-17
@@ -45,7 +45,7 @@
   :address_state: "PB"
   :phone_reference: "8337231790"
   :phone_contact: "83986588406"
-  :salary: 121430
+  :salary_gross: 121430
 - :name: "Yago Roberto Miguel Carvalho"
   :document_br_cpf: "44705477006"
   :birth_date: 1969-03-20
@@ -57,7 +57,7 @@
   :address_state: "TO"
   :phone_reference: "6327278305"
   :phone_contact: "63981438639"
-  :salary: 123040
+  :salary_gross: 123040
 - :name: "Elza Priscila Heloisa Galvão"
   :document_br_cpf: "28354687813"
   :birth_date: 1971-03-17
@@ -69,7 +69,7 @@
   :address_state: "MA"
   :phone_reference: "9835812190"
   :phone_contact: "98986296954"
-  :salary: 7050
+  :salary_gross: 705090
 - :name: "Elias Raul da Conceição"
   :document_br_cpf: "31813458499"
   :birth_date: 1980-01-11
@@ -81,7 +81,7 @@
   :address_state: "DF"
   :phone_reference: "6138530941"
   :phone_contact: "61985328474"
-  :salary: 292860
+  :salary_gross: 292860
 - :name: "Lívia Stella Novaes"
   :document_br_cpf: "24099556816"
   :birth_date: 1991-04-16
@@ -93,7 +93,7 @@
   :address_state: "MT"
   :phone_reference: "6528366023"
   :phone_contact: "65992660565"
-  :salary: 198630
+  :salary_gross: 198630
 - :name: "Ayla Valentina Araújo"
   :document_br_cpf: "88775899493"
   :birth_date: 1961-01-10
@@ -105,7 +105,7 @@
   :address_state: "RN"
   :phone_reference: "8435121828"
   :phone_contact: "84984650855"
-  :salary: 164360
+  :salary_gross: 164360
 - :name: "Augusto Caleb Souza"
   :document_br_cpf: "97283357840"
   :birth_date: 1980-05-26
@@ -117,7 +117,7 @@
   :address_state: "AP"
   :phone_reference: "9626694116"
   :phone_contact: "96992647008"
-  :salary: 270710
+  :salary_gross: 270710
 - :name: "Jennifer Pietra Dias"
   :document_br_cpf: "58610341925"
   :birth_date: 1985-03-02
@@ -129,7 +129,7 @@
   :address_state: "DF"
   :phone_reference: "6136366452"
   :phone_contact: "61997664020"
-  :salary: 251580
+  :salary_gross: 251580
 - :name: "Jennifer Marli Gabriela Lopes"
   :document_br_cpf: "93640317505"
   :birth_date: 1985-02-21
@@ -141,7 +141,7 @@
   :address_state: "GO"
   :phone_reference: "6139059922"
   :phone_contact: "61988625245"
-  :salary: 8090
+  :salary_gross: 809090
 - :name: "Stefany Camila Costa"
   :document_br_cpf: "46319054174"
   :birth_date: 1950-03-06
@@ -153,7 +153,7 @@
   :address_state: "AP"
   :phone_reference: "9625498038"
   :phone_contact: "96987726878"
-  :salary: 60720
+  :salary_gross: 607200
 - :name: "Amanda Josefa Moura"
   :document_br_cpf: "60405539100"
   :birth_date: 1953-05-11
@@ -165,7 +165,7 @@
   :address_state: "AC"
   :phone_reference: "6829387325"
   :phone_contact: "68987283571"
-  :salary: 246780
+  :salary_gross: 246780
 - :name: "Roberto Marcos Vinicius Ribeiro"
   :document_br_cpf: "11874392404"
   :birth_date: '1946-02-08'
@@ -177,7 +177,7 @@
   :address_state: "ES"
   :phone_reference: "2739166205"
   :phone_contact: "27991735353"
-  :salary: 72200
+  :salary_gross: 722000
 - :name: "Maitê Jennifer Letícia Pinto"
   :document_br_cpf: "66407206472"
   :birth_date: 1981-04-03
@@ -189,7 +189,7 @@
   :address_state: "MS"
   :phone_reference: "6726902163"
   :phone_contact: "67998509960"
-  :salary: 31160
+  :salary_gross: 311600
 - :name: "Pietra Marina Lara Pires"
   :document_br_cpf: "10558120083"
   :birth_date: 1980-04-02
@@ -201,7 +201,7 @@
   :address_state: "MS"
   :phone_reference: "6725250584"
   :phone_contact: "67994131179"
-  :salary: 308640
+  :salary_gross: 308640
 - :name: "Gabriela Isadora Lara Nogueira"
   :document_br_cpf: "35440002880"
   :birth_date: 1947-01-15
@@ -213,7 +213,7 @@
   :address_state: "PI"
   :phone_reference: "8639853406"
   :phone_contact: "86998222435"
-  :salary: 303470
+  :salary_gross: 303470
 - :name: "Tiago Edson Martin Oliveira"
   :document_br_cpf: "10259322180"
   :birth_date: 1955-03-02
@@ -225,7 +225,7 @@
   :address_state: "AP"
   :phone_reference: "9627438119"
   :phone_contact: "96998078188"
-  :salary: 321420
+  :salary_gross: 321420
 - :name: "Edson Caleb Caio da Cunha"
   :document_br_cpf: "42365651453"
   :birth_date: 1986-04-15
@@ -237,7 +237,7 @@
   :address_state: "MS"
   :phone_reference: "6725148920"
   :phone_contact: "67989592005"
-  :salary: 277660
+  :salary_gross: 277660
 - :name: "João José Ferreira"
   :document_br_cpf: "47624651947"
   :birth_date: 1966-02-25
@@ -249,7 +249,7 @@
   :address_state: "PI"
   :phone_reference: "8636685000"
   :phone_contact: "86992396261"
-  :salary: 84870
+  :salary_gross: 848700
 - :name: "Kauê Diego Cavalcanti"
   :document_br_cpf: "33239200236"
   :birth_date: 1984-03-01
@@ -261,7 +261,7 @@
   :address_state: "PB"
   :phone_reference: "8336639553"
   :phone_contact: "83995743609"
-  :salary: 36140
+  :salary_gross: 361400
 - :name: "Carolina Julia Analu das Neves"
   :document_br_cpf: "58314912263"
   :birth_date: 1954-04-05
@@ -273,7 +273,7 @@
   :address_state: "SE"
   :phone_reference: "7929091614"
   :phone_contact: "79991649573"
-  :salary: 2440
+  :salary_gross: 244090
 - :name: "Heloise Milena Eloá Viana"
   :document_br_cpf: "55167839092"
   :birth_date: 1998-03-11
@@ -285,7 +285,7 @@
   :address_state: "BA"
   :phone_reference: "7135627620"
   :phone_contact: "71998492442"
-  :salary: 229070
+  :salary_gross: 229070
 - :name: "Melissa Giovanna Teixeira"
   :document_br_cpf: "38622871495"
   :birth_date: 1945-02-19
@@ -297,7 +297,7 @@
   :address_state: "RO"
   :phone_reference: "6937889198"
   :phone_contact: "69982866128"
-  :salary: 151280
+  :salary_gross: 151280
 - :name: "Benício Augusto Monteiro"
   :document_br_cpf: "94897869188"
   :birth_date: '1964-02-09'
@@ -309,7 +309,7 @@
   :address_state: "SE"
   :phone_reference: "7925081158"
   :phone_contact: "79989948044"
-  :salary: 154820
+  :salary_gross: 154820
 - :name: "Maitê Luciana Tânia Rezende"
   :document_br_cpf: "88041314201"
   :birth_date: 1994-01-13
@@ -321,7 +321,7 @@
   :address_state: "PA"
   :phone_reference: "9126374850"
   :phone_contact: "91984375707"
-  :salary: 265800
+  :salary_gross: 265800
 - :name: "Ruan José Nicolas Aparício"
   :document_br_cpf: "42535906597"
   :birth_date: 1998-02-24
@@ -333,7 +333,7 @@
   :address_state: "SC"
   :phone_reference: "4829585392"
   :phone_contact: "48999255779"
-  :salary: 196070
+  :salary_gross: 196070
 - :name: "Liz Eduarda Assunção"
   :document_br_cpf: "62942642270"
   :birth_date: '1970-01-09'
@@ -345,7 +345,7 @@
   :address_state: "MG"
   :phone_reference: "3129024059"
   :phone_contact: "31995543868"
-  :salary: 91160
+  :salary_gross: 911600
 - :name: "Juan Davi Freitas"
   :document_br_cpf: "40306262541"
   :birth_date: 1979-03-27
@@ -357,4 +357,4 @@
   :address_state: "RN"
   :phone_reference: "8437942613"
   :phone_contact: "84987043688"
-  :salary: 212190
+  :salary_gross: 212190
