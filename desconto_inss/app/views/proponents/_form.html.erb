@@ -1,0 +1,42 @@
+<%= simple_form_for proponent do |form| %>
+  <div class="row">
+    <%= form.input :name, label: "Nome", error: "Nome não pode ser vazio", wrapper_html: { class: "col-6" } %>
+    <%= form.input :document_br_cpf, label: "CPF", error: "CPF não pode ser vazio", wrapper_html: { class: "col-2" } %>
+    <%= form.input :birth_date, label: "Data de Aniversário", as: :date, start_year: Date.today.year - 18, end_year: Date.today.year - 75, order: [:day, :month, :year], wrapper_html: { class: "col-4" } %>
+  </div>
+
+  <div class="row">
+    <%= form.input :address_public_place, label: "Endereço", wrapper_html: { class: "col-8" } %>
+    <%= form.input :address_number, label: "Número", wrapper_html: { class: "col-4" } %>
+  </div>
+
+  <div class="row">
+    <%= form.input :address_district, label: "Bairro", wrapper_html: { class: "col-5" } %>
+    <%= form.input :address_city, label: "Cidade", wrapper_html: { class: "col-3" } %>
+    <%= form.input :address_state, label: "Estado", wrapper_html: { class: "col-1" } %>
+    <%= form.input :address_postalcode, label: "CEP", wrapper_html: { class: "col-3" } %>
+  </div>
+
+  <div class="row">
+    <%= form.input :phone_contact, label: "Telefone para contato", wrapper_html: { class: "col-3" } %>
+    <%= form.input :phone_reference, label: "Telefone para referência", wrapper_html: { class: "col-3"} %>
+  </div>
+
+  <div class="row">
+    <%= form.input :salary_gross, label: "Salário", error: "Salário deve ser informado", wrapper_html: { class: "col-3" } %>
+  </div>
+
+  <%= form.button :button, as: :submit, class: "btn btn-primary" do %>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+      <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+    </svg>
+    Salvar
+  <% end %>
+
+  <a href="<%= proponents_path %>" class="btn btn-outline-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+    </svg>
+    Cancelar
+  </a>
+<% end %>
