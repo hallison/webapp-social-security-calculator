@@ -35,6 +35,9 @@ class ProponentsController < ApplicationController
   end
 
   def destroy
+    @proponent.destroy!
+
+    redirect_to proponents_url(page: params[:page]), notice: "Proponente foi excluído com sucesso"
   end
 
   private
