@@ -32,6 +32,12 @@
     Editar
   </a>
 
+  <button type="submit" class="btn btn-outline-primary" formmethod="delete">
+    <input type="hidden" name="_method" value="delete">
+    <%= render partial: "icons/trash" %>
+    Excluir
+  </button>
+
   <a href="<%= proponents_path %>" class="btn btn-outline-primary">
     <%= render partial: "icons/x-lg" %>
     Cancelar
