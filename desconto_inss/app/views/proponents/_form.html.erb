@@ -1,4 +1,4 @@
-<%= simple_form_for proponent do |form| %>
+<%= simple_form_for proponent, method: method do |form| %>
   <div class="row">
     <%= form.input :name, label: "Nome", error: "Nome não pode ser vazio", wrapper_html: { class: "col-6" } %>
     <%= form.input :document_br_cpf, label: "CPF", error: "CPF não pode ser vazio", wrapper_html: { class: "col-2" } %>

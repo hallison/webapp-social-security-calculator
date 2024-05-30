@@ -27,6 +27,11 @@ class ProponentsController < ApplicationController
   end
 
   def update
+    if @proponent.update proponent_params
+      redirect_to @proponent, notice: "Proponente atualizado com sucesso"
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
