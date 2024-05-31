@@ -8,22 +8,28 @@ class Proponent < ApplicationRecord
   validates :birth_date, presence: true
   validates :salary_gross, presence: true
 
-  def social_contribution
-    total_contribution salary
-  end
-
   def update_salary_net!
     update_salary_net.save!
   end
 
   def update_salary_net
+    update_salary_social_contribution
     self[:salary_net] = (salary - social_contribution) * 100 # Money
+    self
+  end
+
+  def update_salary_social_contribution
+    self[:salary_social_contribution] = total_contribution(salary) * 100
     self
   end
 
   private
 
   def salary
-    salary_gross / 100.0 # Money
+    self[:salary_gross] / 100.0 # Money
+  end
+
+  def social_contribution
+    self[:salary_social_contribution] / 100.0 # Money
   end
 end
