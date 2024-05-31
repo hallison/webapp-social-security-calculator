@@ -24,6 +24,7 @@
 
   <div class="row">
     <%= form.input :salary_gross, label: "Salário Bruto", disabled: true, readonly: true, wrapper_html: { class: "col-3" } %>
+    <%= form.input :salary_social_contribution, label: "INSS", disabled: true, readonly: true, wrapper_html: { class: "col-3" } %>
     <%= form.input :salary_net, label: "Salário Líquido", disabled: true, readonly: true, wrapper_html: { class: "col-3" } %>
   </div>
 
@@ -31,6 +32,12 @@
     <%= render partial: "icons/pencil-square" %>
     Editar
   </a>
+
+  <button type="submit" class="btn btn-outline-primary" formmethod="put" formaction="<%= update_salary_proponent_path(proponent) %>">
+    <input type="hidden" name="_method" value="put">
+    <%= render partial: "icons/coin" %>
+    Atualizar Salário
+  </button>
 
   <button type="submit" class="btn btn-outline-primary" formmethod="delete">
     <input type="hidden" name="_method" value="delete">
