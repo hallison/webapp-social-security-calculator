@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_27_135856) do
     t.string "phone_contact", limit: 16
     t.string "phone_reference", limit: 16
     t.integer "salary_gross", null: false
+    t.integer "salary_social_contribution"
     t.integer "salary_net"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
