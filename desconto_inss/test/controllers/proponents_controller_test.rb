@@ -67,7 +67,9 @@ class ProponentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update proponent's salary" do
-    put update_salary_proponent_url(@proponent)
+    assert_changes("@proponent.salary_net") do
+      put update_salary_proponent_url(@proponent)
+    end
 
     assert_redirected_to proponent_url(@proponent)
   end

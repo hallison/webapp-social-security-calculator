@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   root 'proponents#index'
 
-  resources :proponents
+  resources :proponents do
+    put :update_salary, on: :member, to: "proponents#update_salary_net"
+  end
 end
