@@ -1,5 +1,5 @@
 class ProponentsController < ApplicationController
-  before_action :load_proponent, only: %i[ show edit update destroy ]
+  before_action :load_proponent, only: %i[ show edit update destroy update_salary_net ]
 
   def index
     requested_page = params[:page] || 1
@@ -38,6 +38,13 @@ class ProponentsController < ApplicationController
     @proponent.destroy!
 
     redirect_to proponents_url(page: params[:page]), status: :see_other, notice: "Proponente foi excluído com sucesso"
+  end
+
+  def update_salary_net
+    # @proponent.update_salary_net!
+
+    # redirect_to proponents_url(page: params[:page]), status: :see_other, notice: "Salário do proponente foi calculado com sucesso"
+    redirect_to @proponent, status: :see_other, notice: "Salário do proponente foi calculado com sucesso"
   end
 
   private

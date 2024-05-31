@@ -65,4 +65,10 @@ class ProponentsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to proponents_url, status: :see_other
   end
+
+  test "should update proponent's salary" do
+    put update_salary_proponent_url(@proponent)
+
+    assert_redirected_to proponent_url(@proponent)
+  end
 end
