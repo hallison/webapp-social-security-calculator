@@ -1,6 +1,8 @@
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
+require "pry"
+require "pry-byebug"
 
 module ActiveSupport
   class TestCase
