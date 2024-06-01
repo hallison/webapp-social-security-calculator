@@ -13,7 +13,7 @@ class CreateProponents < ActiveRecord::Migration[7.1]
       t.string :phone_contact, limit: 16
       t.string :phone_reference, limit: 16
       t.integer :salary_gross, null: false
-      t.float :salary_social_contribution_range
+      t.float :salary_social_contribution_aliquot
       t.integer :salary_social_contribution_value
       t.integer :salary_net
 

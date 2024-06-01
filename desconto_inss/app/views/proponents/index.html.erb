@@ -26,7 +26,7 @@
       <td><%= proponent[:address_city] %> - <%= proponent[:address_state] %></td>
       <td class="text-end"><%= proponent[:salary_gross] %></td>
       <td class="text-end"><%= proponent[:salary_social_contribution_value] %></td>
-      <td class="text-end"><%= proponent[:salary_social_contribution_range] %></td>
+      <td class="text-end"><%= proponent[:salary_social_contribution_aliquot] %></td>
       <td class="text-end"><%= proponent[:salary_net] %></td>
       <td class="text-end">
         <%= form_with model: proponent, html: { remote: true } do %>

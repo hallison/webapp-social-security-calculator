@@ -73,7 +73,7 @@ module SocialSecurityContribution
         end
       end
 
-      { aliquot_range: , values: contributions.compact }
+      { aliquot: aliquot_range, values: contributions.compact }
     end
   end
 end
