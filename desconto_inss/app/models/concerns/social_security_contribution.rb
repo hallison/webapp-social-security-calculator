@@ -2,7 +2,7 @@
 
 require "active_support/concern"
 
-module SocialSecurity
+module SocialSecurityContribution
   extend ActiveSupport::Concern
 
   included do

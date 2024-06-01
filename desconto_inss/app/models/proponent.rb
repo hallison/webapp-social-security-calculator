@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class Proponent < ApplicationRecord
-  include ::SocialSecurity
+  include SocialSecurityContribution
 
   validates :name, presence: true
   validates :document_br_cpf, presence: true, length: { is: 11 }
