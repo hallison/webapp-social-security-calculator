@@ -1,0 +1,40 @@
+<h1>Proponentes</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Faixa Salarial</th>
+      <th scope="col">Alíquota</th>
+      <th scope="col" colspan="2">Total Proponentes</th>
+    </tr>
+  </thead>
+
+  <tbody class="table-group-divider">
+    <%- @contribution_ranges.each do |aliquot, data|%>
+    <tr>
+      <td><%= data[:range] %></td>
+      <td class="text-end"><%= aliquot %>%</td>
+      <td class="text-end"><%= data[:total] %></td>
+      <td class="text-end"><%= data[:percentual] %>%</td>
+    </tr>
+    <% end -%>
+  </tbody>
+
+  <tfoot>
+    <tr class="align-middle">
+      <td colspan="4">
+        <%= link_to new_proponent_path, class: "btn btn-outline-primary" do %>
+          <%= render partial: "icons/person-plus" %>
+          Novo proponente
+        <% end %>
+
+        <%= link_to proponents_path, class: "btn btn-outline-primary" do %>
+          <%= render partial: "icons/person-lines-fill" %>
+          Proponentes
+        <% end %>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+<%= render partial: "layouts/notice" if notice %>

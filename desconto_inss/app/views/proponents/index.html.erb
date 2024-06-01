@@ -64,6 +64,11 @@
           <%= render partial: "icons/person-plus" %>
           Novo proponente
         <% end %>
+
+        <%= link_to report_proponents_path, class: "btn btn-outline-primary" do %>
+          <%= render partial: "icons/table" %>
+          Relatório
+        <% end %>
       </td>
       <td colspan="8" class="align-middle">
         <%= paginate @proponents %>

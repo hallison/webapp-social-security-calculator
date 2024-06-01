@@ -54,6 +54,21 @@ class ProponentsController < ApplicationController
     end
   end
 
+  def report
+    @total_proponents = Proponent.count
+    @contribution_ranges = Proponent::CONTRIBUTION_RANGES.each_with_object Hash.new do |(aliquot, range), data|
+      key = "%0.2f" % (aliquot * 100).truncate(2)
+      data[key] = {
+        range: format("De %0.2f até %0.2f", range.first, range.last),
+        total: Proponent.where(salary_social_contribution_aliquot: aliquot).count,
+      }
+    end
+
+    @contribution_ranges.each do |aliquot, data|
+      data.update percentual: "%0.2f" % (data[:total].to_f / @total_proponents * 100.0).truncate(2)
+    end
+  end
+
   private
 
   def proponent_params
