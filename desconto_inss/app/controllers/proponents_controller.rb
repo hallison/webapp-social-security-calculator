@@ -43,8 +43,15 @@ class ProponentsController < ApplicationController
   def update_salary_net
     @proponent.update_salary_net!
 
-    # redirect_to proponents_url(page: params[:page]), status: :see_other, notice: "Salário do proponente foi calculado com sucesso"
-    redirect_to @proponent, status: :see_other, notice: "Salário do proponente foi calculado com sucesso"
+    status_params = {
+      status: :see_other,
+      notice: "Salário do proponente foi calculado com sucesso",
+    }
+    if params[:page]
+      redirect_to proponents_url(page: params[:page]), status_params
+    else
+      redirect_to @proponent, status_params
+    end
   end
 
   private
