@@ -13,13 +13,21 @@ class Proponent < ApplicationRecord
   end
 
   def update_salary_net
-    update_salary_social_contribution
-    self[:salary_net] = (salary - social_contribution) * 100 # Money
+    calculate_total_contribution salary
+    update_salary_social_contribution_value
+    update_salary_social_contribution_range
+
+    self[:salary_net] = (salary - social_contribution_value) * 100 # Money
     self
   end
 
-  def update_salary_social_contribution
-    self[:salary_social_contribution] = total_contribution(salary) * 100
+  def update_salary_social_contribution_value
+    self[:salary_social_contribution_value] = contribution[:total] * 100
+    self
+  end
+
+  def update_salary_social_contribution_range
+    self[:salary_social_contribution_range] = contribution[:aliquot_range]
     self
   end
 
@@ -29,7 +37,15 @@ class Proponent < ApplicationRecord
     self[:salary_gross] / 100.0 # Money
   end
 
-  def social_contribution
-    self[:salary_social_contribution] / 100.0 # Money
+  def social_contribution_value
+    self[:salary_social_contribution_value] / 100.0 # Money
+  end
+
+  def contribution
+    @contribution || calculate_total_contribution(salary)
+  end
+
+  def calculate_total_contribution(salary)
+    @contribution = total_contribution(salary)
   end
 end

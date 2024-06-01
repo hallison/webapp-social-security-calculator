@@ -3,20 +3,23 @@ require "test_helper"
 class ProponentTest < ActiveSupport::TestCase
   setup do
     @proponent = proponents(:one)
-    @proponent.salary_gross = 300000
-    @social_contribution = 28162
-    @salary_net = 271838
+    @salaries = {
+      101000 => { salary_social_contribution_range: 0.075, salary_social_contribution_value: 7575 },
+      201000 => { salary_social_contribution_range: 0.09, salary_social_contribution_value: 15972 },
+      301000 => { salary_social_contribution_range: 0.12, salary_social_contribution_value: 26001 },
+      401000 => { salary_social_contribution_range: 0.14, salary_social_contribution_value: 38021 },
+    }
   end
 
   test "should calculate social contribution" do
-    @proponent.update_salary_social_contribution
+    @salaries.each do |salary, contributions|
+      @proponent.salary_gross = salary
 
-    assert_equal @proponent.salary_social_contribution, @social_contribution
-  end
+      @proponent.update_salary_net
 
-  test "should calculate salary net" do
-    @proponent.update_salary_net
-
-    assert_equal @proponent.salary_net, @salary_net
+      contributions.each do |attribute, value|
+        assert_equal @proponent[attribute], value
+      end
+    end
   end
 end
