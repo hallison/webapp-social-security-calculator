@@ -23,9 +23,10 @@
   </div>
 
   <div class="row">
-    <%= form.input :salary_gross, label: "Salário Bruto", disabled: true, readonly: true, wrapper_html: { class: "col-3" } %>
-    <%= form.input :salary_social_contribution, label: "INSS", disabled: true, readonly: true, wrapper_html: { class: "col-3" } %>
-    <%= form.input :salary_net, label: "Salário Líquido", disabled: true, readonly: true, wrapper_html: { class: "col-3" } %>
+    <%= form.input :salary_gross, label: "Salário Bruto", disabled: true, readonly: true, wrapper_html: { class: "col-2" } %>
+    <%= form.input :salary_social_contribution_value, label: "INSS", disabled: true, readonly: true, wrapper_html: { class: "col-2" } %>
+    <%= form.input :salary_social_contribution_range, label: "Alíquota", disabled: true, readonly: true, wrapper_html: { class: "col-2" } %>
+    <%= form.input :salary_net, label: "Salário Líquido", disabled: true, readonly: true, wrapper_html: { class: "col-2" } %>
   </div>
 
   <a href="<%= edit_proponent_path(proponent) %>" class="btn btn-outline-primary">
