@@ -41,11 +41,11 @@ class ProponentsController < ApplicationController
   end
 
   def update_salary_net
-    @proponent.update_salary_net!
+    CalculateSocialContributionJob.perform_async @proponent.id
 
     status_params = {
       status: :see_other,
-      notice: "Salário do proponente foi calculado com sucesso",
+      notice: "Salário do proponente será calculado, aguarde alguns instantes",
     }
     if params[:page]
       redirect_to proponents_url(page: params[:page]), status_params
