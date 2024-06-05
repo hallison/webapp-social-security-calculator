@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     put :update_salary, on: :member, to: "proponents#update_salary_net"
     get :report, on: :collection, to: "proponents#report"
   end
+
+  mount Sidekiq::Web => "/sidekiq"
 end
