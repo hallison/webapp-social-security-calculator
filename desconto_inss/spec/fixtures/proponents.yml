@@ -1,0 +1,27 @@
+one:
+  name: Matthew Michael Murdock
+  document_br_cpf: "09898787655"
+  birth_date: 1978-10-07
+  address_public_place: Avenue
+  address_number: 890
+  address_district: Hell's Kitchen
+  address_city: New York
+  address_state: NY
+  address_postalcode: 10036
+  phone_contact: 
+  phone_reference: 
+  salary_gross: 300000
+
+two:
+  name: Natasha Romanova
+  document_br_cpf: "11122233311"
+  birth_date: 1947-11-15
+  address_public_place: Street
+  address_number: 789
+  address_district: Hell's Kitchen
+  address_city: New York
+  address_state: NY
+  address_postalcode: 10036
+  phone_contact: 
+  phone_reference: 
+  salary_gross: 300000
