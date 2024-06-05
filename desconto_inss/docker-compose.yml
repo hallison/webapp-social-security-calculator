@@ -1,0 +1,60 @@
+services:
+  database:
+    image: postgres:latest
+    restart: always
+    # environment:
+    # - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+    - database:/var/lib/postgresql/data'
+    logging:
+      driver: none
+    ports:
+    - "5432:5432"
+  redis:
+    image: redis:4.0-alpine
+    command: redis-server
+    volumes:
+    - redis:/data
+    ports:
+    - 6379
+    logging:
+      driver: none
+  application:
+    build: ./
+    command: rails server -p 3000 -e development -b "0.0.0.0"
+    environment:
+      DB_USERNAME: postgres
+      DB_PASSWORD: password
+      DB_NAME: desconto_inss
+      DB_PORT: 5432
+      DB_HOST: database
+      RAILS_ENV: development
+      RAILS_MAX_THREADS: 5
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      BUNDLE_PATH: /bundle
+    volumes:
+    - ./:/application
+    - bundle:/bundle
+    ports:
+    - "3000:3000"
+    depends_on:
+    - "database"
+    - "redis"
+  sidekiq:
+    build: ./
+    command: bundle exec sidekiq
+    volumes:
+    - ./:/application
+    environment:
+      RAILS_ENV: development
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    depends_on:
+    - "application"
+    - "redis"
+volumes:
+  bundle:
+  database:
+  redis:
+  sidekiq:
